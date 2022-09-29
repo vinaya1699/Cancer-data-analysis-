@@ -1,0 +1,16 @@
+# Method 1:Create an User Defined function to create a logCPM of an input data 
+
+function1=function(x){
+ matrix_cpm=x
+  
+  for (i in 1:ncol(x)) {
+    matrix_cpm[,i] = (x[,i]/sum(x[,i]))*1000000
+  
+    matrix_cpm[,i]= log2(matrix_cpm[,i] +1)
+
+    
+  }
+  return(matrixc)
+}
+x=read.csv("C:/Users/91973/Desktop/GSE149650_Read_counts.csv",sep=",",header=T,row.names = 1)
+data=function1(x)
