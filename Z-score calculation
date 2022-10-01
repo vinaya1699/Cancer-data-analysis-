@@ -1,21 +1,7 @@
 library(matrixStats)
 library(ComplexHeatmap)
-#function1=function(x){
-#  matrixc=x
-  
-#  for (i in 1:ncol(x)) {
-#    matrixc[,i] = (x[,i]/sum(x[,i]))*1000000
-#    #print(head(matrixc))
-#    matrixc[,i]= log2(matrixc[,i] +1)
-#    #logfc=log2(matrixc+1)
-    
-# }
-# return(matrixc)
-#}
-#x=read.csv("C:/Users/91973/Desktop/GSE149650_Read_counts.csv",sep=",",header=T,row.names = 1)
-#data=function1(x)
 
-data
+data=source("logCPM.rds")
 function2=function(data){
   for (i in 1:ncol(data)){
     z_score = (data - rowMeans(data))/rowSds(as.matrix(data))[row(data)]
