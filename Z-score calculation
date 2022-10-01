@@ -26,3 +26,9 @@ function2=function(data){
   return(Heatmap(zcs[1:10]))
 }
 function2(data)
+
+pdf('data.pdf',width = 10,height = 10)
+
+plot(1:5,pch=20)
+
+dev.off()
