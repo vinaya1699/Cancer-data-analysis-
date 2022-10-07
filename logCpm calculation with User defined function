@@ -7,7 +7,6 @@ function1=function(x){
     matrix_cpm[,i] = (x[,i]/sum(x[,i]))*1000000
   
     matrix_cpm[,i]= log2(matrix_cpm[,i] +1)
-
     
   }
   return(matrixc)
