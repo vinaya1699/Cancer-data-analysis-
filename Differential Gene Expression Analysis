@@ -1,5 +1,6 @@
 #To identify genes which are differential in tumor vs control samples
 
+logcpm=source("logCPM.rds")
 mat=matrix(NA,ncol=4,nrow = nrow(logcpm))
 rownames(mat)=rownames(logcpm)
 colnames(mat)=c('meanTumor','meanControl','pvalue','log2FC')
